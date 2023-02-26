@@ -19,13 +19,50 @@
         //     return `the sum of the two number is ${sum}`;
         // }
         // document.write(sum());
-        const sun = () => {
-            let a = 5;
-            b = 6;
-            let sum = a + b;
-            return `the sum of the two number is ${sum}`;
-            document.write(sum());
+
+        // const sum = () => {
+        //     let a = 5;
+        //     b = 6;
+        //     let sum = a + b;
+        //     return `the sum of the two number is ${sum}`;
+        // }
+        // document.write(sum());
+
+
+        //normal function 
+        let data=[12, 3, 5, 6, 8];
+        // let newData= data.map(function(item) {
+        //     return item*2
+        // })
+        // document.write(newData);
+
+
+
+
+        //arrow function
+        // let newData=data.map((item)=> item*2)
+        // console.log(newData);
+
+
+
+        //arrow function with this(iska khud ka this nhi hota ye parent class ko call krta hai)
+        let item ={
+            name:"palak gupta",
+            getName:function() 
+            {
+                console.log("normal call this", this)
+
+            },
+            getNameArrow:()=>{
+                console.log("arrow call this", this)//parent hamari window hai to ye uska output dega
+            }
         }
+        item.getName();
+        item.getNameArrow();
+
+
+
+
     </script>
 </body>
 
